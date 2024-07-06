@@ -234,16 +234,16 @@ body {
   flex-direction: column;
 }
 .errorP {
-  color: red;
+  color: var(--primary-red);
 }
 
 .errorDiv {
-  border: 1px solid red;
+  border: 1px solid var(--primary-red);
   outline: none;
 }
 
 .errorSpan {
-  background-color: rgba(255, 0, 0, 0.725);
+  background-color: var(--primary-red);
 }
 
 @media (max-width: 835px) {
@@ -266,9 +266,6 @@ body {
   }
 }
 @media (max-width: 400px) {
-  body {
-    background-color: red;
-  }
   .calc_leftSide .inputDiv2 {
     flex-direction: column;
   }
