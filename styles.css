@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --primary-lime: hsl(61, 70%, 52%);
+  --primary-red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --neutral-Slate-100: hsl(202, 86%, 94%);
+  --neutral-Slate-300: hsl(203, 41%, 72%);
+  --neutral-Slate-500: hsl(200, 26%, 54%);
+  --neutral-Slate-700: hsl(200, 24%, 40%);
+  --neutral-Slate-900: hsl(202, 55%, 16%);
+  --font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--neutral-Slate-100);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc_container {
+  width: 70%;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(198, 206, 209, 1);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(198, 206, 209, 1);
+  box-shadow: 0px 0px 11px 0px rgba(198, 206, 209, 1);
+  display: flex;
+
+  /* justify-content: space-between; */
+}
+.calc_container > div {
+  padding: 25px;
+  /* border: 1px solid red; */
+  width: 50%;
+  flex: 1;
+}
+.calc_leftSide .formHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.calc_leftSide .formHeader button {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px var(--neutral-Slate-500);
+  color: var(--neutral-Slate-500);
+  cursor: pointer;
+}
+.calc_leftSide .inputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.calc_leftSide .inputDiv label {
+  color: var(--neutral-Slate-500);
+  font-size: small;
+}
+.calc_leftSide .inputDiv input {
+  font-size: 1.4em;
+  border-radius: 5px;
+  border: solid var(--neutral-Slate-500) 1px;
+  padding: 5px;
+  padding-left: 40px;
+  height: 35px;
+}
+.calc_leftSide .inputDiv input:focus {
+  border: solid 1px var(--primary-lime);
+  outline: none;
+}
+
+.calc_leftSide .inputDiv2 {
+  display: flex;
+  gap: 10px;
+}
+.calc_leftSide .inputDiv2 .inputDiv {
+  flex: 0.5;
+  overflow: hidden;
+}
+.calc_leftSide .inputDiv2 .inputDiv input {
+  padding-left: 2px;
+  padding-right: 40px;
+}
+.calc_leftSide .inputDiv .radioDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.calc_leftSide .inputDiv .radioDiv label {
+  padding: 10px;
+  font-size: large;
+  border: solid var(--neutral-Slate-500) 1px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.finallDiv {
+  position: relative;
+  /* background-color: #000; */
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.finallDiv input {
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+.moveLeft {
+  right: 0;
+}
+.innerCont {
+  position: absolute;
+  background-color: var(--neutral-Slate-100);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+.finallDiv input[name="mortgagetype"]:checked {
+  border: 1px solid var(--primary-lime);
+}
+.finallDiv:focus-within span {
+  background-color: var(--primary-lime);
+}
+.inputContainer button {
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 10px;
+  background-color: var(--primary-lime);
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+}
+.calc_rightSide {
+  background-color: var(--neutral-Slate-900);
+  border-radius: 0px 0px 0px 56px;
+  -moz-border-radius: 0px 0px 0px 56px;
+  -webkit-border-radius: 0px 0px 0px 56px;
+  border: 0px solid #000000;
+}
+
+/* right side */
+
+.calc_rightSide .onClearDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.calc_rightSide .onClearDiv h3 {
+  color: var(--White);
+}
+
+.calc_rightSide .onClearDiv p {
+  color: var(--neutral-Slate-300);
+}
+
+.oncalculatedDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.oncalculatedDiv h3 {
+  color: var(--White);
+}
+.oncalculatedDiv > p {
+  color: var(--neutral-Slate-300);
+}
+
+.oncalculatedDiv .amountShow {
+  border-top: 4px solid var(--primary-lime);
+  height: 300px;
+  border-radius: 10px;
+  background-color: hsl(202, 60%, 12%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.oncalculatedDiv .amountShow p {
+  color: var(--neutral-Slate-300);
+}
+
+.oncalculatedDiv .monthly_amountSpan {
+  color: var(--primary-lime);
+  font-size: 3em;
+  font-weight: 600;
+}
+.oncalculatedDiv .term_amountSpan {
+  color: white;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+.calc_rightSide .hide,
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
+  flex-direction: column;
+}
+.errorP {
+  color: red;
+}
+
+.errorDiv {
+  border: 1px solid red;
+  outline: none;
+}
+
+.errorSpan {
+  background-color: rgba(255, 0, 0, 0.725);
+}
+
+@media (max-width: 835px) {
+  .container {
+    height: 100%;
+  }
+  .calc_container {
+    flex-direction: column;
+    width: 80%;
+    margin: 30px 40px;
+  }
+  .calc_container > div {
+    width: fit-content;
+  }
+  .calc_rightSide {
+    border-radius: 0 0 0 0;
+  }
+  .inputContainer button {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: red;
+  }
+  .calc_leftSide .inputDiv2 {
+    flex-direction: column;
+  }
+}

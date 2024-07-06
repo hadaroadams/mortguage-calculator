@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"> -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Mortgage Calculator
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- Mortgage Calculator
   Clear All
 
   Mortgage Amount
@@ -31,18 +32,18 @@
 
   Calculate Repayments -->
 
-  <!-- Empty results start -->
+    <!-- Empty results start -->
 
-  <!-- Results shown here
+    <!-- Results shown here
 
   Complete the form and click “calculate repayments” to see what 
   your monthly repayments would be. -->
 
-  <!-- Empty results end -->
+    <!-- Empty results end -->
 
-  <!-- Completed results start -->
+    <!-- Completed results start -->
 
-  <!-- Your results
+    <!-- Your results
 
   Your results are shown below based on the information you provided. 
   To adjust the results, edit the form and click “calculate repayments” again.
@@ -51,16 +52,111 @@
 
   Total you'll repay over the term -->
 
-  <!-- Completed results end -->
-  
-  <!-- <div class="attribution">
+    <!-- Completed results end -->
+
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <div>
-
-  </div>
-
-</body>
+    <div class="container">
+      <div class="calc_container">
+        <div class="calc_leftSide">
+          <form action="">
+            <div class="formHeader">
+              <h3>Mortgage Calcultor</h3>
+              <button id="clear">Clear All</button>
+            </div>
+            <div class="inputContainer">
+              <div class="mortAmount inputDiv">
+                <label for="">Mortgage Amount</label>
+                <div class="finallDiv">
+                  <span class="innerCont">$</span>
+                  <input type="number" id="amountInput" required />
+                </div>
+                  <p class="errorP hide">This field is required</p>
+              </div>
+              <div class="inputDiv2">
+                <div class="inputDiv">
+                  <label for="">Mortgage Term</label>
+                  <div class="finallDiv">
+                    <span class="innerCont moveLeft">years</span>
+                    <input type="number" name="" id="termInput" required/>
+                  </div>
+                    <p class="errorP hide">This field is required</p>
+                </div>
+                <div class="inputDiv">
+                  <label for="">Interest Rate</label>
+                  <div class="finallDiv">
+                    <span class="innerCont moveLeft">%</span>
+                    <input type="number" name="" id="rateInput" step="0.01" required/>
+                  </div>
+                  <p class="errorP hide">This field is required</p>
+                </div>
+              </div>
+              <div class="inputDiv">
+                <label for="">Mortgage Type</label>
+                <div class="radioDiv">
+                  <label for="option1">
+                    <input
+                      type="radio"
+                      id="option1"
+                      name="mortgagetype"
+                      value="repayment"
+                    />
+                    Repayment</label
+                  >
+                  <label for="option2">
+                    <input
+                      type="radio"
+                      id="option2"
+                      name="mortgagetype"
+                      value="interest"
+                    />
+                    Interest Only</label
+                  >
+                  <p class="errorP hide">This field is required</p>
+                </div>
+              </div>
+              <button id="calculate" type="submit">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Calculate Repayments</span>
+              </button>
+            </div>
+          </form>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="calc_rightSide">
+          <div class="onClearDiv ">
+            <img src="assets/images/illustration-empty.svg" alt="" />
+            <h3>Results Shown here</h1>
+            <p>Conplete the form and click "calculate repayment" to see what your monthly repayments would be.</p>
+          </div>
+          <div class="oncalculatedDiv hide">
+            <h3>Your results</h3>
+            <p>
+              Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              "calculate repayments" again.
+            </p>
+            <div class="amountShow">
+              <p>Your monthly repayments</p>
+              <div class="monthly_amountSpan">
+                $<span id="monthlyAmount"></span>
+              </div>
+              <hr />
+              <p>Total you'll repay over the term</p>
+              <div class="term_amountSpan">$<span id="termAmount"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/91c2d2ff16.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js" type="module"></script>
 </html>
