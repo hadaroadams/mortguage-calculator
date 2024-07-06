@@ -88,6 +88,10 @@ body {
   border: solid 1px var(--primary-lime);
   outline: none;
 }
+.calc_leftSide .inputDiv input:hover {
+  cursor: pointer;
+  border: solid 1px var(--neutral-Slate-900);
+}
 
 .calc_leftSide .inputDiv2 {
   display: flex;
@@ -114,6 +118,10 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.calc_leftSide .inputDiv .radioDiv label:hover {
+  border: solid var(--primary-lime) 1px;
+  cursor: pointer;
 }
 .inputContainer {
   display: flex;
@@ -158,6 +166,10 @@ body {
   border: none;
   border-radius: 20px;
   width: 80%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 .calc_rightSide {
   background-color: var(--neutral-Slate-900);
@@ -244,6 +256,9 @@ body {
 
 .errorSpan {
   background-color: var(--primary-red);
+}
+.lower {
+  z-index: 0;
 }
 
 @media (max-width: 835px) {
